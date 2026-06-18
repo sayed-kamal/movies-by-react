@@ -1,0 +1,23 @@
+.Navbar {
+ flex-wrap: wrap;
+ text-align: center;
+}
+.Navbar ul {
+    display: flex;
+    align-items: center;
+    gap:15px;
+     padding: 10px;
+     flex-wrap: wrap;
+  
+    
+}
+.Navbar ul li{
+    list-style: none;
+}
+.Navbar ul li a{
+   
+    font-size: 22px;
+    
+    text-decoration: none;
+  color: inherit;
+}
