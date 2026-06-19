@@ -9,22 +9,22 @@ import { useNavigate } from 'react-router-dom';
 export default function Register() {
 
   let validationSchema = Yup.object({
-    name : Yup.string("name is string").
-    required('name is required').
-    min(3,'min 3 letters').
-    max(10,'max letters 10'),
+    name : Yup.string("name is string")
+    .required('name is required')
+    .min(3,'min 3 letters')
+    .max(10,'max letters 10'),
 
-    email:Yup.string().
-    required('email is required').
-    email('in valid email'),
+    email:Yup.string()
+    .required('email is required')
+    .email('in valid email'),
 
-    password: Yup.string().
-    required('password is required')
+    password: Yup.string()
+    .required('password is required')
     .matches(/^[A-Z][\w @]{0,9}$/, 'password not invalid EX:Ahmed@123'),
 
-    rePassword: Yup.string().
-    required('rePassword is required').
-    oneOf([Yup.ref('password')],'rePassword and password not Equal')
+    rePassword: Yup.string()
+    .required('rePassword is required')
+    .oneOf([Yup.ref('password')],'rePassword and password not Equal')
   })
 
   let navigat = useNavigate()
